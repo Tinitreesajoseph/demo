@@ -128,11 +128,20 @@ nav .cta,
 }
 
 /* ==== Product Grid ==== */
-.products .grid {
+
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--space-5);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; /* controls spacing between cards */
 }
+.product {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fff;
+}
+``
+
 
 /* Product card */
 .product {
