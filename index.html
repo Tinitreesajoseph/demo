@@ -31,14 +31,17 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCDW7MXD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) --> 
+  
   <header>
     <div class="container">
       <h1>GA4 E‑commerce Starter</h1>
       <nav>
+        <a href="/about" id="about-link" class="nav-link" target="_self" rel="noopener">About Us</a>
         <button class="cta" data-cta-location="header" id="shop-now-btn">Shop Now</button>
       </nav>
     </div>
   </header>
+
 
 
   <main class="container">
@@ -46,19 +49,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="products" id="products">
       <h2>Featured Products</h2>
       <div class="grid">
+        
         <article class="product" data-sku="SKU_1001" data-name="Classic Tee" data-category="Apparel" data-price="799">
-          <img alt="Classic Tee" src="classic tee.webp" />
-          <h3>Classic Tee</h3>
+          <a href="/products/classic-tee" class="product-link">
+            <img alt="Classic Tee" src="classic-tee.webp" />
+            <h3>Classic Tee</h3>
+          </a>
           <p class="price">₹799</p>
           <button class="add-to-cart">Add to Cart</button>
         </article>
+
         <article class="product" data-sku="SKU_1002" data-name="Sneakers" data-category="Footwear" data-price="2499">
+          <a href="/products/sneakers" class="product-link">
           <img alt="Sneakers"   src="Sneakers.jpg" />
           <h3>Sneakers</h3>
           <p class="price">₹2,499</p>
           <button class="add-to-cart">Add to Cart</button>
         </article>
         <article class="product" data-sku="SKU_1003" data-name="Backpack" data-category="Accessories" data-price="1499">
+          <a href="/products/backpack" class="product-link">
           <img alt="Backpack"   src="backpack.webp" />
           <h3>Backpack</h3>
           <p class="price">₹1,499</p>
@@ -126,12 +135,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </main>
 
   
+  
+
   <footer>
     <div class="container footer-container">
+      <a href="https://www.adidas.com" class="outbound-link" target="_blank" rel="noopener">Adidas Official</a>
       <button class="cta" data-cta-location="footer" id="subscribe-btn">Subscribe</button>
       <p>© 2025 GA4 E‑commerce Starter</p>
     </div>
   </footer>
+
+
 
 
   <script src="app.js"></script>
