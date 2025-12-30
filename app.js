@@ -103,7 +103,7 @@ if(completeBtn){
       transaction_id: transactionId,
       currency: 'INR',
       value: value + shipping,
-      shipping_amount: shipping,        // custom metric parameter
+      shipping: shipping,        // custom metric parameter
       items: cart
     });
     alert('Purchase sent to GA4 (demo).');
