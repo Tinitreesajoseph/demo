@@ -15,12 +15,28 @@ const cart = [];
 
 /***** RENDER CART *****/
 
+
+function calcShipping(cart){
+  // Simple flat-rate shipping; customize this logic if needed
+  if (cart.length === 0) return 0;
+  return 99; // ₹99 flat rate
+}
+
 function renderCart(){
   const el = document.getElementById('cart-summary');
-  if(!el) return; // OK as a comment
-  const total = cart.reduce((sum, item)=> sum + (item.price * item.quantity), 0);
-  el.textContent = cart.length ? `Items: ${cart.length} | Total: ₹${total.toFixed(2)}` : 'Cart is empty';
+  if(!el) return;
+
+  const subtotal = cart.reduce((sum, item)=> sum + (item.price * item.quantity), 0);
+  const shipping = calcShipping(cart);
+  const grandTotal = subtotal + shipping;
+
+  if(cart.length){
+    el.textContent = `Items: ${cart.length} | Subtotal: ₹${subtotal.toFixed(2)} | Shipping: ₹${shipping.toFixed(2)} | Total: ₹${grandTotal.toFixed(2)}`;
+  } else {
+    el.textContent = 'Cart is empty';
+  }
 }
+
 ``
 
 
