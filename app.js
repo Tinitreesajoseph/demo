@@ -14,12 +14,15 @@ function toNumber(v){ return Number(String(v).replace(/[^0-9.-]/g, '')); }
 const cart = [];
 
 /***** RENDER CART *****/
+
 function renderCart(){
   const el = document.getElementById('cart-summary');
-  if(!el) return; // <-- leave only this comment
+  if(!el) return; // OK as a comment
   const total = cart.reduce((sum, item)=> sum + (item.price * item.quantity), 0);
   el.textContent = cart.length ? `Items: ${cart.length} | Total: ₹${total.toFixed(2)}` : 'Cart is empty';
 }
+``
+
 
 /***** ADD TO CART *****/
 function addToCart(productEl){
