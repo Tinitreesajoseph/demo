@@ -1,7 +1,11 @@
 
 /***** SAFETY GUARD *****/
+
+// Guard to prevent runtime crash if gtag isn't ready yet
 window.dataLayer = window.dataLayer || [];
 window.gtag = window.gtag || function(){ dataLayer.push(arguments); };
+
+document.addEventListener('DOMContentLoaded', () => {
 
 /***** UTIL *****/
 function toNumber(v){ return Number(String(v).replace(/[^0-9.-]/g, '')); }
@@ -146,5 +150,6 @@ document.querySelectorAll('.product img, .product h3').forEach(el => {
     console.log('[SELECT_ITEM]', item);
     gtag('event', 'select_item', { items: [ item ]});
   });
+});
 });
 ``
